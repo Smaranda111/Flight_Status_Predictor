@@ -26,10 +26,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Custom CSS to change button color to purple
+# Custom CSS for the title and button color
 st.markdown(
     """
     <style>
+    .big-font {
+        font-size: 48px !important;
+        color: purple;
+    }
     .stButton button {
         background-color: purple;
         color: white;
@@ -103,6 +107,8 @@ def get_days_in_month(year, month):
     return days
 
 ######### About the app ###############
+# Display the title using the custom CSS class
+st.markdown('<p class="big-font">Flight Status Predictor App</p>', unsafe_allow_html=True)
 markdown_about_msg = """
         Welcome to the Flight Status Predictor App!    
         Enter your flight details below to predict if the arrival will be delayed.
